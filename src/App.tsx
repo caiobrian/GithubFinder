@@ -3,7 +3,7 @@ import { SafeAreaView, StatusBar, View } from 'react-native';
 
 import { GithubFinder } from '@app/modules';
 
-import './global.css';
+import '../global.css';
 
 function App(): React.JSX.Element {
   return (
