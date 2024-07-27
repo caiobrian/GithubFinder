@@ -1,0 +1,1 @@
+export { GithubFinder } from './GithubFinder';
