@@ -39,10 +39,11 @@ pod install
 
 ## Execução
 
-A API do Github permite até 60 requisições por hora sem o uso de autenticação. Para mais, é necessário criar um arquivo `.env` na raiz do projeto com sua chave de acesso à API do Github:
+Para a busca de usuários, é necessário uma chave de acesso à API do Github.
+Crie um arquivo `.env` na raiz do projeto com sua chave de acesso:
 
 ```env
-GITHUB_API_TOKEN=your_client_id
+GITHUB_API_TOKEN=your_token_here
 ```
 
 Para conseguir sua chave de acesso, acesse o [Github Docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) e siga as instruções.
