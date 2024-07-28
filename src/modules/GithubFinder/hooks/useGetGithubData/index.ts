@@ -1,1 +1,0 @@
-export { UseGetUserResult } from './useGetGithubData';

@@ -1,1 +1,1 @@
-export { useGetGithubData } from './useGetGithubData/useGetGithubData';
+export { useGetGithubData } from './useGetGithubData';

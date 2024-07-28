@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { RequestError, RequestStatus, User } from '@app/shared/models';
-import { findRepositoriesByUsername, findUserByUsername } from '../../api';
+import { findRepositoriesByUsername, findUserByUsername } from '../api';
 
 export interface UseGetUserResult {
   user: User;

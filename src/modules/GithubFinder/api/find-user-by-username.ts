@@ -1,6 +1,10 @@
 import { githubApiToken, githubBaseUrl } from '@app/shared/config';
 
 export const findUserByUsername = async (username: string) => {
+  if (!githubApiToken) {
+    throw new Error('Token de API não configurado');
+  }
+
   const response = await fetch(`${githubBaseUrl}/users/${username}`, {
     headers: {
       Authorization: `Bearer ${githubApiToken}`,
