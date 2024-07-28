@@ -57,7 +57,11 @@ export const FindUser = () => {
             <TouchableWithLoading
               isLoading={isSearching}
               onPress={handleSearch}
-              variant={collapse ? 'collapsed' : 'default'}
+              cn={
+                collapse
+                  ? 'absolute top-[4px] right-[4px] px-4 py-2'
+                  : 'mt-4 p-4'
+              }
             />
           </View>
         </View>

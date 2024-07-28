@@ -1,27 +1,25 @@
 import React from 'react';
 import { ActivityIndicator, Text, TouchableOpacity } from 'react-native';
+import { mergeClasses } from '@app/shared/utils';
 
 interface TouchableWithLoadingProps
   extends React.ComponentProps<typeof TouchableOpacity> {
   isLoading: boolean;
-  variant?: 'default' | 'collapsed';
+  cn?: string;
 }
-
-const variants = {
-  default: 'mt-4 p-4',
-  collapsed: 'absolute top-[4px] right-[4px] px-4 py-2',
-};
 
 export const TouchableWithLoading = ({
   isLoading,
-  variant = 'default',
+  cn,
   ...props
 }: TouchableWithLoadingProps) => {
+  const style = mergeClasses(
+    'bg-blue-700 flex items-center rounded-full',
+    cn || '',
+  );
+
   return (
-    <TouchableOpacity
-      className={`bg-blue-700 flex items-center rounded-full ${variants[variant]}`}
-      onPress={props.onPress}
-      {...props}>
+    <TouchableOpacity className={style} onPress={props.onPress} {...props}>
       {isLoading ? (
         <ActivityIndicator color="white" size="small" className="h-7" />
       ) : (
